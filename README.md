@@ -21,24 +21,27 @@ Each datatset in the QDataSet consists of 10,000 examples. An example correspond
 
 #### 
 
-| Item                     | Description                                                                                                                                                                                                                                                                                              |
+| Item                     | \Description                                                                                                                                                                                                                                                                                              |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| simulation parameters |                                                                                                                                                     * dim: the dimension $2^n$ of the Hilbert space for $n$ qubits (dimension 2 for single qubit, 4 for two qubits);
-* $\Omega$: the spectral energy gap;
-     * static operators: a list of matrices representing the time-independent parts of the Hamiltonian (i.e. drift components);
-     * dynamic operators: a list of matrices representing the time-dependent parts of the Hamiltonian (i.e. control components), without the pulses. So, if we have a term $f(t) \sigma_x + g(t) \sigma_y$, this list will be $[\sigma_x, \sigma_y]$;
-     * noise operators}: a list of time-dependent parts of the Hamiltonian that are stochastic (i.e. noise components). so if we have terms like $\beta_1(t) \sigma_z + \beta_2(t) \sigma_y$, the list will be $[\sigma_z, \sigma_y]$;
-     * measurement operators}: Pauli operators (including identity) ($I,\sigma_x,\sigma_y, \sigma_z$)
-     * initial states: the six eigenstates of the Pauli operators;
-     * T}: total time (normalised to unity);
-     * num ex}: number of examples, set to 10,000;
-     * batch size: size of batch used in data generation (default is 50);
-     * $K$: number of randomised pulse sequences in Monte Carlo simulation of noise (set to $K = 2000$);
-     * noise profile: N0 to N6 (see above);
-     * pulse shape: Gaussian or Square;
-     * num pulses: number of pulses per interval;
-     * elapsed time: time taken to generate the datasets.                                                                                                                                                    |
+| simulation_parameters |  name: name of the dataset                                                                     |
+|  |       dim: the dimension $2^n$ of the Hilbert space for $n$ qubits (dimension 2 for single qubit, 4 for two qubits)                                                                                                                                                                                                                                                                                                                                                                                                             |
+|  |       $\Omega$: the spectral energy gap                                                                                                                                                                                                                                                                                             |
+|  |  static_operators: a list of matrices representing the time-independent parts of the Hamiltonian (i.e. drift components)|
+|  |  dynamic_operators: a list of matrices representing the time-dependent parts of the Hamiltonian (i.e. control components), without the pulses. So, if we have a term $f(t) \sigma_x + g(t) \sigma_y$, this list will be $[\sigma_x, \sigma_y]$|
+|  |  noise_operators: a list of time-dependent parts of the Hamiltonian that are stochastic (i.e. noise components). so if we have terms like $\beta_1(t) \sigma_z + \beta_2(t) \sigma_y$, the list will be $[\sigma_z, \sigma_y]$|
+|  |  measurement_operators: Pauli operators (including identity) ($I,\sigma_x,\sigma_y, \sigma_z$)|
+|  |  initial_states: the six eigenstates of the Pauli operators|
+|  |  T: total time (normalised to unity)|
+|  |  num_ex: number of examples, set to 10,000|
+|  |  batch_size: size of batch used in data generation (default is 50)|
+|  |  $K$: number of randomised pulse sequences in Monte Carlo simulation of noise (set to $K = 2000$)|
+|  |  noise_profile: N0 to N6 (see paper for detail)|
+|  |  pulse_shape: Gaussian or Square|
+|  |  num_pulses: number of pulses per interval|
+|  |  elapsed_time: time taken to generate the datasets|
 | pulse parameters      | The control pulse sequence parameters for the example:                                                                                                                                                                                                                                                            |
+| | Square pulses: $A_k$ amplitude at time $t_k$|
+| | Gaussian pulses: $A_k$ (amplitude), $\mu$ (mean) and $\sigma$ (standard deviation)|
 | time range            | A sequence of time intervals $\Delta t_j$ with $j = 1,...,M$                                                                                                                                                                                                                                                      |
 | pulses                 | Time-domain waveform of the control pulse sequence.                                                                                                                                                                                                                                                               |
 | distorted pulses      | Time-domain waveform of the distorted control pulse sequence (if there are no distortions, the waveform will be identical to the undistorted pulses).                                                                                                                                                             |
