@@ -5,9 +5,21 @@
 # QDataSet: Quantum Datasets for Machine Learning
 
 ## Overview 
-This is the repository for the QDataSet introduced in [arxiv ref], a quantum dataset designed specifically to facilitate the training and development of QML algorithms. The QDataSet comprises 52 high-quality publicly available datasets derived from simulations of one- and two-qubit systems evolving in the presence and/or absence of noise. 
+This is the repository for the QDataSet introduced in [arxiv ref] *QDataset: Quantum Datasets for Machine Learning* by Perrier, Youssry & Ferrie (2021), a quantum dataset designed specifically to facilitate the training and development of QML algorithms. The QDataSet comprises 52 high-quality publicly available datasets derived from simulations of one- and two-qubit systems evolving in the presence and/or absence of noise.
 
 The datasets are structured to provide a wealth of information to enable machine learning practitioners to use the QDataSet to solve problems in applied quantum computation, such as quantum control, quantum spectroscopy and tomography. Accompanying the datasets in this repository are a set of workbooks demonstrating the use of the QDataSet in a range of optimisation contexts.
+
+### Link to QDataSet
+
+The links to the QDataSet is here: [QDataSet Cloudstor Link](https://cloudstor.aarnet.edu.au/plus/s/rxYKXBS7Tq0kB8o). More details on cloud storage are included below.
+
+### Links to examples notebooks
+
+Example notebooks can be found in the 'examples' subfolder in this repository.
+
+### Link to QDataSet simulation code
+
+Links to the QDataSet simulation code can be found in the 'simulation' subfolder in this repository.
 
 ## Summary
 The QDataSet comprises 52 datasets based on simulations of one- and two-qubit systems evolving in the presence and/or absence of noise subject to a variety of controls. It has been developed to provide a large-scale set of datasets for the training, benchmarking and competitive development of classical and quantum algorithms for common tasks in quantum sciences, including quantum control, quantum tomography and noise spectroscopy. 
@@ -63,7 +75,7 @@ For example, the dataset 'G\_2q\_IX-XI-XX\_IZ-ZI\_N1-N6' is two qubit, Gaussian 
 
 ## QDataSet Parameters
 
-A dictionary of specifications for each example in the QDataSet is set out in table below.
+A dictionary of specifications for each example in the QDataSet is set out in table below. Each of the 10,000 examples in each of the 52 datasets is encoded in one of these dictionaries.
 
 
 | Item                     | Description                                                                                                                                                                                                                                                                                              |
@@ -103,9 +115,32 @@ A dictionary of specifications for each example in the QDataSet is set out in ta
 
 ## QDataSet Generation
 
+### Hardware specifications
+
 Each dataset in the QDataSet consists of 10,000 examples. An example corresponds to a given control pulse sequence, associated with a set of noise realizations. Every dataset is stored as a compressed zip file, consisting of a number of Python *Pickle* files that stores the information. Each file is essentially a dictionary consisting of the elements described in the table below. The datasets were generated on the University of Technology (Sydney) high-performance computing cluster (iHPC). Each dataset was generated using Singularity containers with Python 3 installed, requiring standard packages including Tensorflow 2.5.0. 
 
 The QDataSet was generated on using the iHPC Mars node (one of 30). The node consists of Intel Xeon Gold 6238R 2.2GHz 28cores (26 cores enabled) 38.5MB L3 Cache (Max Turbo Freq. 4.0GHz, Min 3.0GHz) 360GB RAM. We utilised GPU resources using a NVIDIA Quadro RTX 6000 Passive (3072 Cores, 384 Tensor Cores, 16GB Memory). It took around three months to generate over 2020-2021, coming to around 14TB of compressed quantum data. Single-qubit examples were relatively quick (between a few days and a week or so). The two-qubit examples took much longer, often several weeks.
+
+### Simulation code
+
+Links to the simulation code is set-out in Python scripts which can be found in the 'simulation' subfolder. To run a simulation, run the relevant code notebook. In more detail, the simulation code comrpises:
+* *Dataset code*: each of the 52 datasets is generated in one of 26 Python scripts (each script generates the non-distorted and distored examples for the dataset). For example, the script 'dataset_G_1q_X.py' generates the single-qubit dataset with Gaussian control pulses via x-axis control (noise and distortion free)
+* *utilities.py*: this script is called by each dataset code and contains general procedures for generating the dataset.
+* *simulation.py*: this script is called by utilities.py and contains the details of the quantum simulation.
+
+Please note, the two-qubit simulations tend to consume a lot of RAM. Using Singularity, wrapping a container with Python 3 and Tensorflow 2.5.0 required around 360GB of RAM running for between a few days and one week for most of the two-qubit simulation datasets.
+
+## Dataset link and description
+
+### Dataset Cloud storage
+
+The QDataSet is stored using Cloudstor, a service provided via AARNet for UTS. We set-out the links below:
+
+[QDataSet Cloudstor Link](https://cloudstor.aarnet.edu.au/plus/s/rxYKXBS7Tq0kB8o)
+
+Each dataset is stored in its own separate subfolder. 
+
+### Dataset description
 
 The table below lists the name and description of each dataset.
 
