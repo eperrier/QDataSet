@@ -21,14 +21,11 @@ Each datatset in the QDataSet consists of 10,000 examples. An example correspond
 
 #### 
 
-| Item                     | Description                                                                                                                                                                                                                                                                                              |
+| Item                     | \Description                                                                                                                                                                                                                                                                                              |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | simulation_parameters |  name: name of the dataset                                                                     |
-|  |       dim: the dimension <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%242%5En%24" 
-alt="$2^n$"> of the Hilbert space for $n$ qubits (dimension 2 for single qubit, 4 for two qubits)                                                                                                                                                                                                                                                                                                                                                                                                             |
-|  |       "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%24%5COmega%24" 
-alt="$\Omega$">: the spectral energy gap                                                                                                                                                                                                                                                                                             |
+|  |       dim: the dimension ![$2^n](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%242%5En) of the Hilbert space for $n$ qubits (dimension 2 for single qubit, 4 for two qubits)                                                                                                                                                                                                                                                                                                                                                                                                             |
+|  |       ![$\Omega$](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%24%5COmega%24): the spectral energy gap                                                                                                                                                                                                                                                                                             |
 |  |  static_operators: a list of matrices representing the time-independent parts of the Hamiltonian (i.e. drift components)|
 |  |  dynamic_operators: a list of matrices representing the time-dependent parts of the Hamiltonian (i.e. control components), without the pulses. So, if we have a term $f(t) \sigma_x + g(t) \sigma_y$, this list will be $[\sigma_x, \sigma_y]$|
 |  |  noise_operators: a list of time-dependent parts of the Hamiltonian that are stochastic (i.e. noise components). so if we have terms like $\beta_1(t) \sigma_z + \beta_2(t) \sigma_y$, the list will be $[\sigma_z, \sigma_y]$|
@@ -57,6 +54,8 @@ alt="$\Omega$">: the spectral energy gap                                        
 | $U_I$                  | The interaction unitary $U_I(t)$ for each noise realization at time-step $j$.                                                                                                                                                                                                                                     |
 | $V_O$                  | Set of $3 \times 2000$ expectation values (measurements) of the three Pauli observables for all possible states for each noise realization. For each state, the order of measurement is: $\sigma_x, \sigma_y, \sigma_z $ applied to the evolved initial states.                                                   |
 | $E_O$                  | The expectations values (measurements) of the three Pauli observables for all possible states averaged over all noise realizations. For each state, the order of measurement is: $\sigma_x, \sigma_y, \sigma_z $ applied to the evolved initial states.                                                           |
+
+
 
 
 
