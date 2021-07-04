@@ -23,7 +23,21 @@ Each datatset in the QDataSet consists of 10,000 examples. An example correspond
 
 | Item                     | Description                                                                                                                                                                                                                                                                                              |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| simulation parameters |                                                                                                                                                                                                                                                                                                    |
+| simulation parameters |                                                                                                                                                     * dim: the dimension $2^n$ of the Hilbert space for $n$ qubits (dimension 2 for single qubit, 4 for two qubits);
+     * $\Omega$: the spectral energy gap;
+     * static operators: a list of matrices representing the time-independent parts of the Hamiltonian (i.e. drift components);
+     * dynamic operators: a list of matrices representing the time-dependent parts of the Hamiltonian (i.e. control components), without the pulses. So, if we have a term $f(t) \sigma_x + g(t) \sigma_y$, this list will be $[\sigma_x, \sigma_y]$;
+     * noise operators}: a list of time-dependent parts of the Hamiltonian that are stochastic (i.e. noise components). so if we have terms like $\beta_1(t) \sigma_z + \beta_2(t) \sigma_y$, the list will be $[\sigma_z, \sigma_y]$;
+     * measurement operators}: Pauli operators (including identity) ($I,\sigma_x,\sigma_y, \sigma_z$)
+     * initial states: the six eigenstates of the Pauli operators;
+     * T}: total time (normalised to unity);
+     * num ex}: number of examples, set to 10,000;
+     * batch size: size of batch used in data generation (default is 50);
+     * $K$: number of randomised pulse sequences in Monte Carlo simulation of noise (set to $K = 2000$);
+     * noise profile: N0 to N6 (see above);
+     * pulse shape: Gaussian or Square;
+     * num pulses: number of pulses per interval;
+     * elapsed time: time taken to generate the datasets.                                                                                                                                                    |
 | pulse parameters      | The control pulse sequence parameters for the example:                                                                                                                                                                                                                                                            |
 | time range            | A sequence of time intervals $\Delta t_j$ with $j = 1,...,M$                                                                                                                                                                                                                                                      |
 | pulses                 | Time-domain waveform of the control pulse sequence.                                                                                                                                                                                                                                                               |
