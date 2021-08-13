@@ -1,6 +1,7 @@
 ```python
 
 ```
+![alt text](https://github.com/eperrier/QDataSet/blob/main/qdataset_clean.png?raw=true)
 
 # QDataSet: Quantum Datasets for Machine Learning
 
