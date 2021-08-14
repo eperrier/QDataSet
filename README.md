@@ -149,6 +149,8 @@ The table below lists the name and description of each dataset.
 |----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | G_1q_X                         | (i) Qubits: one; (ii) Control: x-axis, Gaussian; (iii) Noise: none; (iv) No distortion.                                                                                                     |
 | G_1q_X_D                      | (i) Qubits: one; (ii) Control: x-axis, Gaussian; (iii) Noise: none; (iv) Distortion.                                                                                                        |
+| G_1q_XY                         | (i) Qubits: one; (ii) Control: x-axis and y-axis, Gaussian; (iii) Noise: none; (iv) No distortion.                                                                                                     |
+| G_1q_XY_D                      | (i) Qubits: one; (ii) Control: x-axis and y-axis, Gaussian; (iii) Noise: none; (iv) Distortion.                                                                                                        |
 | G_1q_XY_XZ_N1N5              | (i) Qubits: one; (ii) Control: x-axis and y-axis, Gaussian; (iii) Noise: N1 on x-axis, N5 on z-axis; (iv) No distortion.                                                              |
 | G_1q_XY_XZ_N1N5_D           | (i) Qubits: one; (ii) Control: x-axis and y-axis, Gaussian; (iii) Noise: N1 on x-axis, N5 on z-axis; (iv) No distortion.                                                              |
 | G_1q_XY_XZ_N1N6              | (i) Qubits: one; (ii) Control: x-axis and y-axis, Gaussian; (iii) Noise: N1 on x-axis, N6 on z-axis; (iv) Distortion.                                                                 |
@@ -171,6 +173,9 @@ The table below lists the name and description of each dataset.
 | G_2q_IX-XI-XX_IZ-ZI_N1-N5    | (i) Qubits: two; (ii) Control: single x-axis control on both qubits and x-axis interacting control, Gaussian; (iii) Noise: N1 and N5 on z-axis noise on each qubit; (iv) Distortion.    |
 | S_1q_X                         | (i) Qubits: one; (ii) Control: x-axis, square; (iii) Noise: none; (iv) No distortion.                                                                                                       |
 | S_1q_X_D                      | (i) Qubits: one; (ii) Control: x-axis, Gaussquaresian; (iii) Noise: none; (iv) Distortion.                                                                                                  |
+| S_1q_XY                         | (i) Qubits: one; (ii) Control: x-axis and y-axis, square; (iii) Noise: none; (iv) No distortion.                                                                                                       |
+| S_1q_XY_D                      | (i) Qubits: one; (ii) Control: x-axis and y-axis, Gaussquaresian; (iii) Noise: none; (iv) Distortion.                                                                                                  |
+
 | S_1q_XY_XZ_N1N5              | (i) Qubits: one; (ii) Control: x-axis and y-axis, square; (iii) Noise: N1 on x-axis, N5 on z-axis; (iv) No distortion.                                                                |
 | S_1q_XY_XZ_N1N5_D           | (i) Qubits: one; (ii) Control: x-axis and y-axis, Gaussian; (iii) Noise: N1 on x-axis, N5 on z-axis; (iv) No distortion.                                                              |
 | S_1q_XY_XZ_N1N6              | (i) Qubits: one; (ii) Control: x-axis and y-axis, square; (iii) Noise: N1 on x-axis, N6 on z-axis; (iv) Distortion.                                                                   |
