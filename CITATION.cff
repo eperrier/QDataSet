@@ -4,6 +4,10 @@ authors:
   - family-names: Perrier
     given-names: Elija
     orcid: https://orcid.org/0000-0002-6052-6798
+  - family-names: Youssry
+    given-names: Akram
+  - family-names: Ferrie
+    given-names: Chris
 title: "QDataSet: Quantum Datasets for Machine Learning"
 version: 1.0.0
 date-released: 2017-12-18
