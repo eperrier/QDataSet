@@ -22,6 +22,23 @@ Example notebooks can be found in the 'examples' subfolder in this repository.
 
 Links to the QDataSet simulation code can be found in the 'simulation' subfolder in this repository.
 
+### Citing this repository
+
+Citation of this repository is recommended in the following formats (see the 'Cite this repository' link to the right):
+
+Perrier E., Youssry A., Ferrie C. (2021). QDataSet: Quantum Datasets for Machine Learning (version 1.0.0). DOI: https://doi.org/10.5281/zenodo.5202814
+
+For Bibtex:
+
+@misc{Perrier_QDataSet_Quantum_Datasets_2021,
+author = {Perrier, Elija and Youssry, Akram and Ferrie, Chris},
+doi = {10.5281/zenodo.5202814},
+month = {8},
+title = {QDataSet: Quantum Datasets for Machine Learning},
+url = {https://github.com/eperrier/QDataSet},
+year = {2021}
+}
+
 ## Summary
 The QDataSet comprises 52 datasets based on simulations of one- and two-qubit systems evolving in the presence and/or absence of noise subject to a variety of controls. It has been developed to provide a large-scale set of datasets for the training, benchmarking and competitive development of classical and quantum algorithms for common tasks in quantum sciences, including quantum control, quantum tomography and noise spectroscopy. 
 
