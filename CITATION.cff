@@ -10,5 +10,6 @@ authors:
     given-names: Chris
 title: "QDataSet: Quantum Datasets for Machine Learning"
 version: 1.0.0
+doi: 10.5281/zenodo.5202814
 date-released: 2021-08-14
 url: "https://github.com/eperrier/QDataSet"
