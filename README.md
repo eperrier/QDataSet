@@ -6,7 +6,7 @@
 # QDataSet: Quantum Datasets for Machine Learning
 
 ## Overview 
-This is the repository for the QDataSet introduced in [arxiv ref] *QDataset: Quantum Datasets for Machine Learning* by Perrier, Youssry & Ferrie (2021), a quantum dataset designed specifically to facilitate the training and development of QML algorithms. The QDataSet comprises 52 high-quality publicly available datasets derived from simulations of one- and two-qubit systems evolving in the presence and/or absence of noise.
+This is the repository for the QDataSet introduced in [*QDataset: Quantum Datasets for Machine Learning* by Perrier, Youssry & Ferrie (2021)](https://arxiv.org/abs/2108.06661), a quantum dataset designed specifically to facilitate the training and development of QML algorithms. The QDataSet comprises 52 high-quality publicly available datasets derived from simulations of one- and two-qubit systems evolving in the presence and/or absence of noise.
 
 The datasets are structured to provide a wealth of information to enable machine learning practitioners to use the QDataSet to solve problems in applied quantum computation, such as quantum control, quantum spectroscopy and tomography. Accompanying the datasets in this repository are a set of workbooks demonstrating the use of the QDataSet in a range of optimisation contexts.
 
@@ -22,7 +22,11 @@ Example notebooks can be found in the 'examples' subfolder in this repository.
 
 Links to the QDataSet simulation code can be found in the 'simulation' subfolder in this repository.
 
-### Citing this repository
+### Citing this repository and paper
+
+Citation of the paper:
+
+Perrier, E., Youssry, A. & Ferrie, C. QDataset: Quantum Datasets for Machine Learning. (2021). 	arXiv:2108.06661 [quant-ph].
 
 Citation of this repository is recommended in the following formats (see the 'Cite this repository' link to the right):
 
